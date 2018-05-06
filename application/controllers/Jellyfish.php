@@ -34,6 +34,21 @@ class Jellyfish extends MY_Controller {
 
 	 public function jellyfish()
  	{
- 		$this->build('jellyfish/jellyfish');
+        $data = array(
+			'links'		=> $this->add_jellyfish_links()
+		);
+ 		$this->build('jellyfish/jellyfish', $data);
  	}
+
+    public function add()
+	{
+		//this command loads a view from the views folder
+		$this->build('jellyfish/add');
+	}
+
+	public function edit(){
+
+		//this command loads a view from the views folder
+		$this->build('jellyfish/edit');
+	}
 }

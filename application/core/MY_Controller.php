@@ -37,6 +37,26 @@ class MY_Controller extends CI_Controller {
             'Users'         => 'users',
             );
     }
+
+    protected function add_user_links(){
+		return array(
+            array(
+				'icon'		=> NULL,
+				'caption'	=> 'ADD',
+				'link'		=> 'user/add'
+			),
+        );
+	}
+
+    protected function add_jellyfish_links(){
+		return array(
+            array(
+				'icon'		=> NULL,
+				'caption'	=> 'ADD',
+				'link'		=> 'jellyfish/add'
+			),
+        );
+	}
 }
 
 

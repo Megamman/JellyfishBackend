@@ -1,5 +1,8 @@
 
-    <div class="card border-dark mt-4 mx-5 ">
+<div class="container mt-4 mx-5">
+    <h5 class="card-title">Jellyfish</h5>
+
+    <div class="card border-dark">
         <div class="card-header bg-dark text-white">
             <div class="row">
                 <div class="mr-auto ml-2">
@@ -94,3 +97,4 @@
             </div>
         </div>
     </div>
+</div>

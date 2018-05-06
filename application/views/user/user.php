@@ -1,4 +1,20 @@
-<div class="card border-dark mt-4 mx-5">
+
+<div class="container mt-4 mx-5">
+
+    <div class="d-flex flex-row td-margin">
+        <h5 class="card-title">Users
+
+            <?php foreach ($links as $link): ?>
+                <a href="<?=site_url($link['link'])?>" class="btn btn-outline-primary btn-sm py-0 px-1" role="button">
+                    <?php if ($link['caption'] != null): ?>
+                        <?=$link['caption']?>
+                    <?php endif; ?>
+                </a>
+            <?php endforeach; ?>
+        </h5>
+    </div>
+
+    <div class="card border-dark">
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -31,4 +47,5 @@
             </tr>
         </tbody>
     </table>
+</div>
 </div>

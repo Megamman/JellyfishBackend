@@ -34,6 +34,21 @@ class Users extends MY_Controller {
 
 	 public function user()
  	{
- 		$this->build('user/user');
+        $data = array(
+			'links'		=> $this->add_user_links()
+		);
+ 		$this->build('user/user', $data);
  	}
+
+    public function add()
+	{
+		//this command loads a view from the views folder
+		$this->build('user/add');
+	}
+
+	public function edit(){
+
+		//this command loads a view from the views folder
+		$this->build('user/edit');
+	}
 }
