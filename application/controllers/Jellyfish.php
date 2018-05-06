@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Copy extends CI_Controller {
+class Jellyfish extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,11 +18,22 @@ class Copy extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	 public function index()
+
+	 // magic method to load the parent class
+    function __construct()
+    {
+	   // without this, we won't  be able to...
+	   // this->build our pages.
+	   parent::__construct();
+    }
+
+	 function index()
+    {
+ 	  $this->jellyfish();
+    }
+
+	 public function jellyfish()
  	{
- 		$data = array(
- 			'links'		=> $this->nav_links()
- 		);
- 		$this->build('report/report');
+ 		$this->build('jellyfish/jellyfish');
  	}
 }

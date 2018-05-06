@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>MCAST</title>
+        <title>Spot the Jellyfish</title>
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/solid.css" integrity="sha384-HTDlLIcgXajNzMJv5hiW5s2fwegQng6Hi+fN6t5VAcwO/9qbg2YEANIyKBlqLsiT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/regular.css" integrity="sha384-R7FIq3bpFaYzR4ogOiz75MKHyuVK0iHja8gmH1DHlZSq4tT/78gKAa7nl4PJD7GP" crossorigin="anonymous">
@@ -16,8 +16,14 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <ul class="navbar-nav mx-auto">
+        <nav class="navbar navbar-expand navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">
+                <img src="<?=base_url('MainIcon/SpotTheJellyfishAppIcon.png')?>" width="40" height="40" alt="">
+            </a>
+            <a class="navbar-brand" href="#">
+                Spot the Jellyfish
+            </a>
+            <ul class="navbar-nav mr-auto">
             <?php foreach ($nav as $page => $url): ?>
                 <li class="nav-item">
                     <?=anchor($url, $page, array('class' => 'nav-link'));?>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Copy extends MY_Controller {
+class Users extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,30 +19,21 @@ class Copy extends MY_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	 function index()
+	 // magic method to load the parent class
+    function __construct()
     {
- 	   $this->();
+	   // without this, we won't  be able to...
+	   // this->build our pages.
+	   parent::__construct();
     }
 
-	function pagename()
-	{
-		/*
-		$data = array(
-			'links'		=> $this->form_edit_links()
-		);
-		$this->build('', $data);
-		*/
-	}
+	 function index()
+    {
+ 	  $this->user();
+    }
 
-	public function add()
-	{
-		//this command loads a view from the views folder
-		$this->build('');
-	}
-
-	public function update(){
-
-		//this command loads a view from the views folder
-		$this->build('');
-	}
+	 public function user()
+ 	{
+ 		$this->build('user/user');
+ 	}
 }
