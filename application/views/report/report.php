@@ -1,6 +1,6 @@
 
     <div class="card border-dark mt-4 mx-5 ">
-        <div class="card-header">
+        <div class="card-header bg-dark text-white">
             <div class="row">
                 <div class="mr-auto ml-2">
                     Report No. 1
